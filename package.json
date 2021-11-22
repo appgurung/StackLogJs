@@ -1,8 +1,8 @@
 {
   "name": "stacklog-io",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Log everything in few clicks",
-  "main": "index.js",
+  "main": "index.obf.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,6 +16,6 @@
   "author": "stacklog",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.24.0"
   }
 }
