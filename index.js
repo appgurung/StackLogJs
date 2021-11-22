@@ -3,9 +3,9 @@ const axios = require("axios");
 class StackLog{
     init(config){
         this.secretKey = config.secretKey;
-        this.bucketId = config.bucketId;
-        this.channel = "PSatmlzvx";
-        this.apiURL = "http://192.168.43.244:8873/api/v1/sandbox/log/create/" + this.bucketId;
+        this.bucketId = config.bucketKey;
+        this.channel = "Bg7hg8UP";
+        this.apiURL = "http://www.stacklog.io:8873/api/v1/sandbox/log/create/" + this.bucketId;
         this.catchAllError = true;
 
         //register uncaught exception
@@ -15,7 +15,9 @@ class StackLog{
                 this.fatal(err.stack).then((result)=>{
                     console.log(result);
                     process.exit(1);
-                });
+                }).catch((error)=>{
+                    console.log(error);
+                });;
 
             }
 
@@ -33,7 +35,7 @@ class StackLog{
                     },
                     {
                         headers:{
-                            "authorization": `${this.secretKey}`,
+                            "secretKey": `${this.secretKey}`,
                         }
                     }
                 );
@@ -58,7 +60,7 @@ class StackLog{
                     },
                     {
                         headers:{
-                            "authorization": `${this.secretKey}`,
+                            "secretKey": `${this.secretKey}`,
                         }
                     }
                 );
@@ -83,7 +85,7 @@ class StackLog{
                     },
                     {
                         headers:{
-                            "authorization": `${this.secretKey}`,
+                            "secretKey": `${this.secretKey}`,
                         }
                     }
                 );
@@ -108,7 +110,7 @@ class StackLog{
                     },
                     {
                         headers:{
-                            "authorization": `${this.secretKey}`,
+                            "secretKey": `${this.secretKey}`,
                         }
                     }
                 );
@@ -133,7 +135,7 @@ class StackLog{
                     },
                     {
                         headers:{
-                            "authorization": `${this.secretKey}`,
+                            "secretKey": `${this.secretKey}`,
                         }
                     }
                 );
